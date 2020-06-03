@@ -1,0 +1,182 @@
+body {
+  font-family: "Biryani", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #333;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1 img {
+  height: 100px;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 3;
+}
+
+.menu {
+  background-color: #202B4C;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: 2;
+}
+
+.open {
+  transform: translate(0);
+}
+
+nav {
+  position: absolute;
+  left: 65px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  display: block;
+}
+
+.left-image {
+  padding-right: 360px;
+  position: relative;
+}
+
+.left-image h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 40px 0 30px;
+}
+
+.left-image h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.left-image .copy {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 480px;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.8);
+  padding-left: 20px;
+}
+
+.right-image {
+  padding-left: 360px;
+  position: relative;
+}
+
+.right-image h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.right-image .copy {
+  position: absolute;
+  left: 0;
+  top: 90px;
+  width: 480px;
+  background-color: rgba(255,255,255,0.8)
+}
+
+.right-image p, .left-image p {
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.left-image img, .right-image img {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+.view-more {
+  margin-top: 80px;
+  padding: 220px 20px 180px;
+  background-image: url(images/beach-pano.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.overlay {
+  background-color: rgba(255,255,255,0.3);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.view-more h2 {
+  font-size: 64px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.left-image img, .left-image .copy,
+.right-image img, .right-image .copy, .overlay {
+  transition: transform 0.5s ease;
+}
+
+.left-image:hover img {
+  transform: rotate(-5deg);
+}
+.left-image:hover .copy {
+  transform: scale(1.15) translateY(-50%);
+}
+
+.right-image:hover img {
+  transform: rotate(10deg);
+}
+.right-image:hover .copy {
+  transform: scale(1.1) translateX(20px);
+}
+
+.view-more .overlay {
+  transform: all 0.8s ease;
+}
+
+.view-more:hover .overlay {
+  opacity: 1;
+}
+
+.view-more:hover h2 {
+  transform: scale(0.9);
+  color: rgba(255, 255, 255, 0.8);
+}
